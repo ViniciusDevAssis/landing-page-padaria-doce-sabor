@@ -56,3 +56,71 @@ h2 {
     padding: 16px 32px;
     text-underline-offset: 4px;
 }
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+.produto {
+    position: relative;
+    cursor: pointer;
+}
+
+.produto h3 {
+    border: 2px solid #f2b968;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.produto img {
+    top: 32px;
+    right: 24px;
+    border-radius: 8px;
+}
+
+.produto .lista {
+    display: flex;
+    list-style-type: none;
+    border-right: 1px solid #f2b968;
+    border-bottom: 1px solid #f2b968;
+    border-left: 1px solid #f2b968;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.produto.active .lista {
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.preco {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Aumenta o card levemente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
+}
