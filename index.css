@@ -60,13 +60,13 @@ h2 {
 #produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 64px;
     padding: 64px 80px;
 }
 
 .produto {
     position: relative;
     cursor: pointer;
+    gap: 10px;
 }
 
 .produto h3 {
@@ -110,17 +110,23 @@ h2 {
     padding: 20px;
     margin: 10px;
     text-align: center;
+    gap: 8px;
     transition: transform 0.3s ease;
 }
 
+.item h4, .item p{
+    margin: 10px 0px;
+}
+
 .preco {
+    margin: 10px;
     font-size: 1.2em;
     font-weight: bold;
     color: #27ae60;
 }
 
 .item:hover {
-    transform: scale(1.05); /* Aumenta o card levemente */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
