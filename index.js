@@ -5,3 +5,11 @@ produtos.forEach(function (produto) {
         produto.classList.toggle('active')
     })
 })
+
+var depoimentos = document.querySelectorAll('.depoimento')
+
+depoimentos.forEach(function (depoimento) {
+    depoimento.addEventListener('click', function(){
+        depoimento.classList.toggle('active')
+    })
+})
